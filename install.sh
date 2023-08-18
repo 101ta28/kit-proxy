@@ -9,18 +9,19 @@ curl -L "https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/kit-proxy/main/k
 echo "Making kit-proxy executable..."
 chmod +x "${DESTINATION}"
 
-echo "Setting up alias for kit-proxy..."
+echo "Setting up alias for kit-proxy to source it..."
 
 # Check and set alias for bash
 if [ -f "${HOME}/.bashrc" ]; then
-    echo "alias kit-proxy='${DESTINATION}'" >> "${HOME}/.bashrc"
+    echo "alias kit-proxy='source ${DESTINATION}'" >> "${HOME}/.bashrc"
     echo "Added alias to .bashrc"
 fi
 
 # Check and set alias for zsh
 if [ -f "${HOME}/.zshrc" ]; then
-    echo "alias kit-proxy='${DESTINATION}'" >> "${HOME}/.zshrc"
+    echo "alias kit-proxy='source ${DESTINATION}'" >> "${HOME}/.zshrc"
     echo "Added alias to .zshrc"
 fi
 
 echo "kit-proxy has been installed! Please restart your shell or source your configuration file."
+

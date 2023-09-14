@@ -25,3 +25,12 @@ $ kit-proxy status
 # スクリプトのヘルプを見る
 $ kit-proxy help
 ```
+
+## アンインストール
+
+このスクリプトは`/usr/local/bin/kit-proxy`に保存されています。
+下記のコマンドでアンインストール(削除)できます。
+
+```bash
+$ sudo rm /usr/local/bin/kit-proxy
+```

@@ -2,7 +2,6 @@
 # install.sh
 
 DESTINATION="/usr/local/bin/kit-proxy"
-GITHUB_USERNAME="101ta28"
 
 # Check if the script is being run with sudo
 if [[ $EUID -ne 0 ]]; then
@@ -11,7 +10,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 echo "Downloading kit-proxy from GitHub..."
-if ! curl -L "https://raw.githubusercontent.com/${GITHUB_USERNAME}/kit-proxy/main/kit-proxy" -o "${DESTINATION}"; then
+if ! curl -L "https://raw.githubusercontent.com/101ta28/kit-proxy/main/kit-proxy" -o "${DESTINATION}"; then
     echo "Error: Failed to download kit-proxy. Please check your internet connection."
     exit 1
 fi

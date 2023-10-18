@@ -9,7 +9,7 @@
 ## インストール
 
 ```bash
-$ curl -L "https://raw.githubusercontent.com/101ta28/kit-proxy/main/install.sh" | bash
+$ sudo bash -c "$(curl -L 'https://raw.githubusercontent.com/101ta28/kit-proxy/main/install.sh')"
 ```
 
 ## 使い方

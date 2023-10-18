@@ -2,9 +2,10 @@
 # install.sh
 
 DESTINATION="/usr/local/bin/kit-proxy"
+GITHUB_USERNAME="101ta28"
 
 echo "Downloading kit-proxy from GitHub..."
-curl -L "https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/kit-proxy/main/kit-proxy" -o "${DESTINATION}"
+curl -L "https://raw.githubusercontent.com/${GITHUB_USERNAME}/kit-proxy/main/kit-proxy" -o "${DESTINATION}"
 
 echo "Making kit-proxy executable..."
 chmod +x "${DESTINATION}"

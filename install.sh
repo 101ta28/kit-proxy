@@ -10,7 +10,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 echo "Downloading kit-proxy from GitHub..."
-if ! curl -L "https://raw.githubusercontent.com/101ta28/kit-proxy/main/kit-proxy" -o "${DESTINATION}"; then
+if ! curl -L "https://raw.githubusercontent.com/101ta28/kit-proxy/main/kit-proxy.sh" -o "${DESTINATION}"; then
     echo "Error: Failed to download kit-proxy. Please check your internet connection."
     exit 1
 fi

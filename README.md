@@ -9,7 +9,11 @@
 ## インストール
 
 ```bash
+# 学外からはこちら
 $ sudo bash -c "$(curl -L 'https://raw.githubusercontent.com/101ta28/kit-proxy/main/install.sh')"
+
+# 学内(プロキシ環境内)ではこちら
+$ http_proxy="http://wwwproxy.kanazawa-it.ac.jp:8080/" https_proxy="http://wwwproxy.kanazawa-it.ac.jp:8080/" sudo -E bash -c "$(curl -L 'https://raw.githubusercontent.com/101ta28/kit-proxy/main/install.sh')" && unset http_proxy https_proxy
 ```
 
 ## 使い方

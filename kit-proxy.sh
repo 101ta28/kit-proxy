@@ -10,9 +10,9 @@ function enable_proxy() {
     # git settings
     git config --global http.proxy "${KIT_PROXY}"
     # npm settings
-    npm -g config set http-proxy "${KIT_PROXY}"
-    npm -g config set https-proxy "${KIT_PROXY}"
-    npm -g config set registry "http://registry.npmjs.org/"
+    npm config set http-proxy "${KIT_PROXY}"
+    npm config set https-proxy "${KIT_PROXY}"
+    npm config set registry "http://registry.npmjs.org/"
     # yarn settings
     yarn config set proxy "${KIT_PROXY}"
     yarn config set https-proxy "${KIT_PROXY}"
@@ -25,9 +25,9 @@ function disable_proxy() {
     # git settings
     git config --global --unset http.proxy
     # npm settings
-    npm -g config delete http-proxy
-    npm -g config delete https-proxy
-    npm -g config delete registry
+    npm config delete http-proxy
+    npm config delete https-proxy
+    npm config delete registry
     # yarn settings
     yarn config delete proxy
     yarn config delete https-proxy

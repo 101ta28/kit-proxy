@@ -20,16 +20,16 @@ $ http_proxy="http://wwwproxy.kanazawa-it.ac.jp:8080/" https_proxy="http://wwwpr
 
 ```bash
 # プロキシを有効にする
-$ kit-proxy on
+$ . kit-proxy on
 
 # プロキシを無効にする
-$ kit-proxy off
+$ . kit-proxy off
 
 # プロキシの設定を確認する
-$ kit-proxy status
+$ . kit-proxy status
 
 # スクリプトのヘルプを見る
-$ kit-proxy help
+$ . kit-proxy help
 ```
 
 ## アンインストール

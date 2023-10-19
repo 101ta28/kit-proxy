@@ -46,7 +46,7 @@ function show_status() {
     echo "NPM HTTPS Proxy: $(npm -g config get https-proxy)"
     echo "Yarn Proxy: $(yarn config get proxy)"
     echo "Yarn HTTPS Proxy: $(yarn config get https-proxy)"
-    echo "Python PIP Proxy: $(pip config get global.proxy 2>/dev/null 1>/dev/null && echo \"active\" || echo \"inactive\")"
+    echo "Python PIP Proxy: $(pip config get global.proxy && echo \"active\" || echo \"inactive\")"
 }
 
 function show_help() {

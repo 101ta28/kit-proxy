@@ -16,6 +16,8 @@ function enable_proxy() {
     # yarn settings
     yarn config set proxy "${KIT_PROXY}"
     yarn config set https-proxy "${KIT_PROXY}"
+    # pip settings
+    pip config set global.proxy "${KIT_PROXY}"
     echo "Set proxy"
 }
 
@@ -31,6 +33,8 @@ function disable_proxy() {
     # yarn settings
     yarn config delete proxy
     yarn config delete https-proxy
+    # pip settings
+    pip config unset global.proxy
     echo "Unset proxy"
 }
 
@@ -42,6 +46,7 @@ function show_status() {
     echo "NPM HTTPS Proxy: $(npm -g config get https-proxy)"
     echo "Yarn Proxy: $(yarn config get proxy)"
     echo "Yarn HTTPS Proxy: $(yarn config get https-proxy)"
+    echo "Python PIP Proxy: $(pip config get global.proxy)"
 }
 
 function show_help() {
